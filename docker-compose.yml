@@ -4,7 +4,7 @@ services:
     #image: bytemark/webdav
     build:
       dockerfile: Dockerfile2
-    container_name: webdav
+    hostname: webdav
     restart: always
     environment:
       AUTH_TYPE: Digest
@@ -18,7 +18,7 @@ services:
   nginx:
     build:
       dockerfile: Dockerfile
-    container_name: proxy-webdav
+    hostname: proxy
  #   volumes:
  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
