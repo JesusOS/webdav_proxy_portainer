@@ -8,8 +8,8 @@ services:
       AUTH_TYPE: Digest
       USERNAME: frodo
       PASSWORD: bolson
-#    volumes:
-#      - /docker/files:/var/lib/dav
+    volumes:
+      - /docker/files:/var/lib/dav
     depends_on:
       - nginx
 
