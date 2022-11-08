@@ -1,0 +1,23 @@
+version: '3'
+services:
+  webdav:
+    #image: bytemark/webdav
+    build: dockerfile1
+    hostname: webdav
+    restart: always
+    environment:
+      AUTH_TYPE: Digest
+      USERNAME: frodo
+      PASSWORD: bolson
+    volumes:
+      - /docker/files:/var/lib/dav
+    depends_on:
+      - nginx
+
+  nginx:
+    build: dockerfile2
+    hostname: proxy
+ #   volumes:
+ #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - 8888:80

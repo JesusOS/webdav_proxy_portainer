@@ -1,0 +1,4 @@
+FROM bytemark/webdav
+RUN mkdir -p "/media/data"
+RUN chown -R www-data:www-data "/media/data"
+COPY prueba.txt /media/data
