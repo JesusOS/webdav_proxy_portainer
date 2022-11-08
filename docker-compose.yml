@@ -18,7 +18,7 @@ services:
   nginx:
     build:
       dockerfile: Dockerfile
-    container_name: proxy
+    container_name: proxy-webdav
  #   volumes:
  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
