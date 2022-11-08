@@ -1,3 +1,3 @@
 FROM bytemark/webdav
-RUN mkdir "/docker/files"
-RUN touch "/docker/files/prueba.txt"
+RUN mkdir /docker/files
+RUN touch /docker/files/prueba.txt
