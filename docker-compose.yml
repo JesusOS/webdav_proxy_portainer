@@ -1,7 +1,9 @@
 version: '3'
 services:
   webdav:
-    image: bytemark/webdav
+    #image: bytemark/webdav
+    build:
+      dockerfile: Dockerfile2
     hostname: webdav
     restart: always
     environment:
@@ -14,7 +16,8 @@ services:
       - nginx
 
   nginx:
-    build: .
+    build:
+      dockerfile: Dockerfile
     hostname: proxy
  #   volumes:
  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
