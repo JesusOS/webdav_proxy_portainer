@@ -14,7 +14,7 @@ services:
       - nginx
 
   nginx:
-    build: dockerfile2/
+    build: .
     hostname: proxy
  #   volumes:
  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
