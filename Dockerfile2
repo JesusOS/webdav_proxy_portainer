@@ -1,3 +1,5 @@
 FROM bytemark/webdav
-RUN mkdir -p /docker/files
-RUN touch /docker/files/prueba.txt
+RUN mkdir -p "/docker/files"
+RUN chown -R www-data:www-data "/docker/files"
+RUN touch "/docker/files/prueba.txt"
+VOLUME /docker/files
