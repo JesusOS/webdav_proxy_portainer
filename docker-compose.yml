@@ -1,16 +1,15 @@
 version: '3'
 services:
   webdav:
-    #image: bytemark/webdav
-    build: dockerfile1/
+    image: bytemark/webdav
     hostname: webdav
     restart: always
     environment:
       AUTH_TYPE: Digest
       USERNAME: frodo
       PASSWORD: bolson
-  #  volumes:
-  #    - /docker/files:/var/lib/dav
+    volumes:
+      - /docker/files:/var/lib/dav
     depends_on:
       - nginx
 
